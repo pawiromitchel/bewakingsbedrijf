@@ -12,6 +12,9 @@ public class Post {
         this.locatie = locatie;
     }
 
+    public Post() {
+    }
+
     public int getId() {
         return id;
     }

@@ -16,6 +16,9 @@ public class Rooster {
         this.datum = datum;
     }
 
+
+    public Rooster(){}
+
     public int getId() {
         return id;
     }

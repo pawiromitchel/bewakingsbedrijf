@@ -6,9 +6,9 @@ package sr.unasat.bewakingsbedrijf.entities;
 public class Gebruiker {
     private int id;
     private Rol rol;
-    private String voornaam,achternaam,adres,woonplaats,idnummer,geslacht;
+    private String voornaam,achternaam,adres,woonplaats,idnummer,geslacht,geboortedatum;
 
-    public Gebruiker(int id, Rol rol, String voornaam, String achternaam, String adres, String woonplaats, String idnummer, String geslacht) {
+    public Gebruiker(int id, Rol rol, String voornaam, String achternaam, String adres, String woonplaats, String idnummer, String geslacht, String geboortedatum) {
         this.id = id;
         this.rol = rol;
         this.voornaam = voornaam;
@@ -17,6 +17,10 @@ public class Gebruiker {
         this.woonplaats = woonplaats;
         this.idnummer = idnummer;
         this.geslacht = geslacht;
+        this.geboortedatum = geboortedatum;
+    }
+
+    public Gebruiker() {
     }
 
     public int getId() {
@@ -81,5 +85,13 @@ public class Gebruiker {
 
     public void setGeslacht(String geslacht) {
         this.geslacht = geslacht;
+    }
+
+    public String getGeboortedatum() {
+        return geboortedatum;
+    }
+
+    public void setGeboortedatum(String geboortedatum) {
+        this.geboortedatum = geboortedatum;
     }
 }
