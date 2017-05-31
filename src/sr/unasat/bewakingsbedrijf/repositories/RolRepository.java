@@ -75,7 +75,7 @@ public class RolRepository {
 
         try {
             // Statements allow to issue SQL queries to the database
-            preparedStatement = connect.prepareStatement("select * from rollen where id = ?");
+            preparedStatement = connect.prepareStatement("select * from bewakingsbedrijf.rollen where id = ?");
             // Result set get the result of the SQL query
             preparedStatement.setInt(1, recordId);
             resultSet = preparedStatement.executeQuery();

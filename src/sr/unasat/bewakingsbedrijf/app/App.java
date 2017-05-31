@@ -10,6 +10,5 @@ public class App {
     public static void main(String[] args) {
         RolRepository rolRepository = new RolRepository();
         Rol rol = rolRepository.selectRecord(1);
-        System.out.println(rol);
     }
 }
