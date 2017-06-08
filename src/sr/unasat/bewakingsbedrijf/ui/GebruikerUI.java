@@ -3,9 +3,9 @@ package sr.unasat.bewakingsbedrijf.ui;
 import sr.unasat.bewakingsbedrijf.entities.Gebruiker;
 import sr.unasat.bewakingsbedrijf.entities.Post;
 import sr.unasat.bewakingsbedrijf.repositories.GebruikerRepository;
-import sr.unasat.bewakingsbedrijf.repositories.PostRepository;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,15 +17,13 @@ import java.util.List;
  * Created by Jonathan on 6/7/2017.
  */
 public class GebruikerUI extends JPanel{
-    private JButton selectAllButton
-            , insertButton
-            , updateButton
-            , deleteButton;
     private JList outputList;
     private GebruikerRepository gebruikerRepo;
     private DefaultListModel listModel;
     private DefaultTableModel listTableModel;
     private JTable outputTable;
+    private JButton selectAllButton, insertButton, updateButton, deleteButton;
+    private JPanel buttonPanel;
 
     public GebruikerUI(){
         gebruikerRepo = new GebruikerRepository();
@@ -36,25 +34,16 @@ public class GebruikerUI extends JPanel{
         updateButton = new JButton("Update");
         deleteButton = new JButton("Delete");
 
-        //Bounds
-        selectAllButton.setBounds(60, 100, 120, 20);
-        insertButton.setBounds(60, 80, 120, 20);
-        updateButton.setBounds(60, 60, 120, 20);
-        deleteButton.setBounds(60, 40, 120, 20);
-
-
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new BorderLayout(10,5));
-        buttonPanel.setBounds(40, 110, 140, 100);
+        buttonPanel = new JPanel(new GridLayout(4,1,5,4));
         buttonPanel.add(selectAllButton);
         buttonPanel.add(insertButton);
         buttonPanel.add(updateButton);
         buttonPanel.add(deleteButton);
+        JPanel west = new JPanel(new GridBagLayout());
+        west.add(buttonPanel);
+        add(west, BorderLayout.WEST);
 
-        add(buttonPanel, BorderLayout.LINE_START);
-
-
-        //nog veranderen
+        //	Creeer outputPanel en voeg toe
         JPanel outputPanel = new JPanel();
         outputPanel.setLayout(new BoxLayout(outputPanel, BoxLayout.Y_AXIS));
         add(outputPanel, BorderLayout.CENTER);
@@ -66,15 +55,46 @@ public class GebruikerUI extends JPanel{
         outputList.setVisibleRowCount(5);
         JScrollPane listPanel = new JScrollPane(outputList);
         listPanel.setPreferredSize(new Dimension(800, 150));
-        outputPanel.add(listPanel);
+        //outputPanel.add(listPanel);
 
         listTableModel = new DefaultTableModel();
-        String[] colnames = {"id", "locatie"};
+        String[] colnames = {"id", "naam", "leeftijd", "adres", "studierichting", "cijfergemiddelde"};
         Vector colnamesV = new Vector(Arrays.asList(colnames));
         outputTable = new JTable(null, colnamesV);
         JScrollPane tablePanel = new JScrollPane(outputTable);
         tablePanel.setPreferredSize(new Dimension(800, 150));
         outputPanel.add(tablePanel);
+
+
+
+        // Select listener
+
+        insertButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame insert = new JFrame("Insert");
+                insert.setLayout(new BorderLayout());
+                insert.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                insert.setSize(500, 500);
+                insert.setVisible(true);
+
+                JTextField nameField = new JTextField();
+                JLabel nameLabel = new JLabel("Name");
+                JPanel labelPanel = new JPanel();
+                JPanel textPanel = new JPanel();
+                nameField.setEditable(true);
+                nameField.setBounds(50, 50, 10, 200);
+                labelPanel.setLayout(new FlowLayout(FlowLayout.LEADING));
+                textPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+                labelPanel.add(nameLabel);
+                textPanel.add(nameField);
+                add(textPanel, BorderLayout.CENTER);
+                add(labelPanel, BorderLayout.EAST);
+                insert.add(textPanel);
+                insert.add(labelPanel);
+
+            }
+        });
 
         // Select listener
         selectAllButton.addActionListener(new ActionListener() {
