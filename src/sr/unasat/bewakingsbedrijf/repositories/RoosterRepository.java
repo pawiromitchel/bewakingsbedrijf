@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class RoosterRepository {
 
-    private Connection connect;
+    Connection connect;
 
     public RoosterRepository() {
         initialize();
@@ -23,7 +23,7 @@ public class RoosterRepository {
             // Onderstaande zoekt de juist class op uit de library en laad het in JVM
             Class.forName("com.mysql.jdbc.Driver");
             // De connectie wordt vervolgens gemaakt naar de database middels de juiste authenticatie
-            connect = DriverManager.getConnection("jdbc:mysql://localhost/bewakingsbedrijf?user=root&password=PAWIR0MITCHEL");
+            connect = DriverManager.getConnection("jdbc:mysql://localhost/bewakingsbedrijf?user=root&password=");
         } catch (ClassNotFoundException e) {
             System.out.println("De class is niet gevonden!");
         } catch (SQLException e) {

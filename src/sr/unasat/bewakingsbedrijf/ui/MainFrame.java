@@ -9,7 +9,8 @@ import java.awt.*;
 public class MainFrame extends JFrame {
     public MainFrame() throws HeadlessException {
         super("SwingApp");
-        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //create and set menu bar
         MenuBar menuBar = new MenuBar();
@@ -20,6 +21,7 @@ public class MainFrame extends JFrame {
         tabbedPane.setBounds(50,50,200,200);
 
         //  Place Student
+        tabbedPane.add("Gebruiker", new GebruikerUI());
         tabbedPane.add("Posten", new PostUI());
 
         //  Place Rooster

@@ -1,5 +1,6 @@
 package sr.unasat.bewakingsbedrijf.app;
 
+import sr.unasat.bewakingsbedrijf.ui.Login;
 import sr.unasat.bewakingsbedrijf.ui.MainFrame;
 
 /**
@@ -7,6 +8,10 @@ import sr.unasat.bewakingsbedrijf.ui.MainFrame;
  */
 public class SwingApp {
     public static void main(String[] args) {
+
+
+        //Login login = new Login();
+
         MainFrame mainFrame = new MainFrame();
         //plaats een comment
     }
