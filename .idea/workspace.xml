@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a11723f-7742-4cd3-bd51-2744a297efdf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/GebruikerUI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/Login.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/app/App.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/app/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/app/SwingApp.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/app/SwingApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/repositories/PostRepository.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/repositories/PostRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/repositories/RolRepository.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/repositories/RolRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/ui/MainFrame.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/ui/MainFrame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/ui/PostUI$1.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/ui/PostUI$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/ui/PostUI.class" afterPath="$PROJECT_DIR$/bin/sr/unasat/bewakingsbedrijf/ui/PostUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/App.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/App.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/SwingApp.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/SwingApp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RolRepository.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RolRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/GebruikerUI.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/GebruikerUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MainFrame.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MainFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/PostUI.java" afterPath="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/PostUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,85 +30,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SwingApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/SwingApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GebruikerRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="110" lean-forward="false" selection-start-line="24" selection-start-column="110" selection-end-line="24" selection-end-column="110" />
-              <folding>
-                <marker date="1496841636295" expanded="true" signature="1623:1647" ph=" SELECT statement (GEBRUIKERS)" />
-                <marker date="1496841636295" expanded="true" signature="3529:3566" ph=" SELECT statement (GEBRUIKERS)" />
-                <marker date="1496841636295" expanded="true" signature="5608:5975" ph=" UPDATE statement (GEBRUIKERS)" />
-                <marker date="1496841636295" expanded="true" signature="7175:7210" ph=" DELETE statement (GEBRUIKERS)" />
-                <marker date="1496841636295" expanded="true" signature="7781:7834" ph=" INSERT statement (GEBRUIKERS)" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="110" lean-forward="false" selection-start-line="24" selection-start-column="110" selection-end-line="24" selection-end-column="110" />
-              <folding>
-                <marker date="1496841636219" expanded="true" signature="1598:1618" ph=" SELECT statement (POSTEN)" />
-                <marker date="1496841636219" expanded="true" signature="2526:2559" ph=" SELECT statement (POSTEN)" />
-                <marker date="1496841636219" expanded="true" signature="3664:3732" ph=" UPDATE statement (POSTEN)" />
-                <marker date="1496841636219" expanded="true" signature="4367:4398" ph=" DELETE statement (POSTEN)" />
-                <marker date="1496841636219" expanded="true" signature="4959:4994" ph=" INSERT statement (POSTEN)" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RolRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RolRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-              <folding>
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <marker date="1496855427244" expanded="true" signature="1545:1565" ph=" SELECT statement (ROLLEN)" />
-                <marker date="1496855427244" expanded="true" signature="2455:2505" ph=" SELECT statement (ROLLEN)" />
-                <marker date="1496855427244" expanded="true" signature="3592:3657" ph=" UPDATE statement (ROLLEN)" />
-                <marker date="1496855427244" expanded="true" signature="4287:4318" ph=" DELETE statement (ROLLEN)" />
-                <marker date="1496855427244" expanded="true" signature="4877:4912" ph=" INSERT statement (ROLLEN)" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="49" column="83" lean-forward="false" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
+            <state relative-caret-position="187">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
+                <marker date="1497109644074" expanded="true" signature="7781:7834" ph=" INSERT statement (GEBRUIKERS)" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InsertRooster.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/InsertRooster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+            <state relative-caret-position="391">
+              <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,13 +66,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GebruikerUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GebruikerUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/GebruikerUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+            <state relative-caret-position="850">
+              <caret line="63" column="49" lean-forward="false" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoosterUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/RoosterUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1734">
+              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding>
+                <marker date="1497110780924" expanded="false" signature="6317:6336" ph=" { " />
+                <marker date="1497110780924" expanded="false" signature="6363:6377" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -132,24 +104,42 @@
       <file leaf-file-name="RoosterRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state relative-caret-position="2941">
+              <caret line="179" column="5" lean-forward="false" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
               <folding>
-                <marker date="1496855339768" expanded="true" signature="1559:1581" ph=" SELECT statement (ROOSTERS)" />
-                <marker date="1496855339768" expanded="true" signature="2943:2978" ph=" SELECT statement (ROOSTERS)" />
-                <marker date="1496855339768" expanded="true" signature="4510:4686" ph=" UPDATE statement (ROOSTER)" />
-                <marker date="1496855339768" expanded="true" signature="5737:5769" ph=" DELETE statement (ROOSTER)" />
-                <marker date="1496855339768" expanded="true" signature="6336:6375" ph=" INSERT statement (ROOSTER)" />
+                <marker date="1497111177623" expanded="true" signature="1559:1581" ph=" SELECT statement (ROOSTERS)" />
+                <marker date="1497111177623" expanded="true" signature="2943:2978" ph=" SELECT statement (ROOSTERS)" />
+                <marker date="1497111177623" expanded="true" signature="4510:4572" ph=" UPDATE statement (ROOSTER)" />
+                <marker date="1497111177623" expanded="true" signature="4510:4684" ph=" UPDATE statement (ROOSTER)" />
+                <marker date="1497111177623" expanded="true" signature="5735:5768" ph=" DELETE statement (ROOSTER)" />
+                <marker date="1497111177623" expanded="true" signature="6335:6375" ph=" INSERT statement (ROOSTER)" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Rol.java">
+      <file leaf-file-name="PostRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="1785">
+              <caret line="111" column="53" lean-forward="false" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1497107114662" expanded="true" signature="1550:1570" ph=" SELECT statement (POSTEN)" />
+                <marker date="1497107114662" expanded="true" signature="2478:2511" ph=" SELECT statement (POSTEN)" />
+                <marker date="1497107114662" expanded="true" signature="3616:3684" ph=" UPDATE statement (POSTEN)" />
+                <marker date="1497107114662" expanded="true" signature="4319:4350" ph=" DELETE statement (POSTEN)" />
+                <marker date="1497107114662" expanded="true" signature="4911:4946" ph=" INSERT statement (POSTEN)" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gebruiker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Gebruiker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="816">
+              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -158,8 +148,8 @@
       <file leaf-file-name="PostUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/PostUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+            <state relative-caret-position="1547">
+              <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -177,6 +167,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Vak</find>
+      <find>[</find>
+      <find>null</find>
+      <find>exception</find>
+      <find>rolrepo</find>
+      <find>gebruiker</find>
+      <find>search</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,29 +191,34 @@
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Roosters.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MenuBar.java" />
         <option value="$PROJECT_DIR$/bewakingsbedrijf.iml" />
-        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/App.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Rol.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Rooster.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Post.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Gebruiker.java" />
         <option value="$PROJECT_DIR$/lib/mysql-connector-java-5.1.35-bin.jar!/com/mysql/jdbc/JDBC4Connection.class" />
         <option value="$PROJECT_DIR$/lib/mysql-connector-java-5.1.35-bin.jar!/com/mysql/jdbc/SQLError.class" />
-        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.java" />
-        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java" />
-        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RolRepository.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/App.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/SwingApp.java" />
-        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/Login.java" />
-        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/PostUI.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/gebruikerui/SelectAllGebruiker.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/gebruikerui/InsertGebruiker.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/gebruikerui/GebruikerUI.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/InsertGebruiker.java" />
         <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/GebruikerUI.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/RoosterUI.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/PostUI.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.java" />
+        <option value="$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MainFrame.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1376" />
+    <option name="width" value="1364" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -347,7 +348,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VendingMachine" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="sr.unasat.bewakingsbedrijf.ui" />
+      <recent name="sr.unasat.bewakingsbedrijf.ui.gebruikerui" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -634,47 +644,79 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1364" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27168575" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294509" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2781155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20322086" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27168575" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2035061" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -683,103 +725,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="110" lean-forward="false" selection-start-line="24" selection-start-column="110" selection-end-line="24" selection-end-column="110" />
-          <folding>
-            <marker date="1496841636219" expanded="true" signature="1598:1618" ph=" SELECT statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="2526:2559" ph=" SELECT statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="3664:3732" ph=" UPDATE statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="4367:4398" ph=" DELETE statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="4959:4994" ph=" INSERT statement (POSTEN)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RolRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="110" lean-forward="false" selection-start-line="23" selection-start-column="110" selection-end-line="23" selection-end-column="110" />
-          <folding>
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <marker date="1496855427244" expanded="true" signature="1545:1565" ph=" SELECT statement (ROLLEN)" />
-            <marker date="1496855427244" expanded="true" signature="2455:2505" ph=" SELECT statement (ROLLEN)" />
-            <marker date="1496855427244" expanded="true" signature="3592:3657" ph=" UPDATE statement (ROLLEN)" />
-            <marker date="1496855427244" expanded="true" signature="4287:4318" ph=" DELETE statement (ROLLEN)" />
-            <marker date="1496855427244" expanded="true" signature="4877:4912" ph=" INSERT statement (ROLLEN)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="110" lean-forward="false" selection-start-line="25" selection-start-column="110" selection-end-line="25" selection-end-column="110" />
-          <folding>
-            <marker date="1496855339768" expanded="true" signature="1559:1581" ph=" SELECT statement (ROOSTERS)" />
-            <marker date="1496855339768" expanded="true" signature="2943:2978" ph=" SELECT statement (ROOSTERS)" />
-            <marker date="1496855339768" expanded="true" signature="4510:4686" ph=" UPDATE statement (ROOSTER)" />
-            <marker date="1496855339768" expanded="true" signature="5737:5769" ph=" DELETE statement (ROOSTER)" />
-            <marker date="1496855339768" expanded="true" signature="6336:6375" ph=" INSERT statement (ROOSTER)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/PostUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Rol.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Gebruiker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding>
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/SwingApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Gebruiker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding>
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Post.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,11 +745,9 @@
         <state relative-caret-position="289">
           <caret line="24" column="96" lean-forward="false" selection-start-line="24" selection-start-column="96" selection-end-line="24" selection-end-column="96" />
           <folding>
-            <marker date="1496841636295" expanded="true" signature="1623:1647" ph=" SELECT statement (GEBRUIKERS)" />
-            <marker date="1496841636295" expanded="true" signature="3529:3566" ph=" SELECT statement (GEBRUIKERS)" />
-            <marker date="1496841636295" expanded="true" signature="5608:5975" ph=" UPDATE statement (GEBRUIKERS)" />
-            <marker date="1496841636295" expanded="true" signature="7175:7210" ph=" DELETE statement (GEBRUIKERS)" />
-            <marker date="1496841636295" expanded="true" signature="7781:7834" ph=" INSERT statement (GEBRUIKERS)" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <marker date="1497109644074" expanded="true" signature="7781:7834" ph=" INSERT statement (GEBRUIKERS)" />
           </folding>
         </state>
       </provider>
@@ -810,11 +757,12 @@
         <state relative-caret-position="289">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <marker date="1496841636219" expanded="true" signature="1598:1618" ph=" SELECT statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="2526:2559" ph=" SELECT statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="3664:3732" ph=" UPDATE statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="4367:4398" ph=" DELETE statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="4959:4994" ph=" INSERT statement (POSTEN)" />
+            <element signature="imports" expanded="true" />
+            <marker date="1497107114662" expanded="true" signature="1550:1570" ph=" SELECT statement (POSTEN)" />
+            <marker date="1497107114662" expanded="true" signature="2478:2511" ph=" SELECT statement (POSTEN)" />
+            <marker date="1497107114662" expanded="true" signature="3616:3684" ph=" UPDATE statement (POSTEN)" />
+            <marker date="1497107114662" expanded="true" signature="4319:4350" ph=" DELETE statement (POSTEN)" />
+            <marker date="1497107114662" expanded="true" signature="4911:4946" ph=" INSERT statement (POSTEN)" />
           </folding>
         </state>
       </provider>
@@ -840,7 +788,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -858,7 +806,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -876,7 +824,7 @@
         <state relative-caret-position="90">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -885,9 +833,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/SwingApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding>
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -897,17 +852,7 @@
         <state relative-caret-position="90">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/SwingApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -916,10 +861,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -928,7 +870,7 @@
         <state relative-caret-position="75">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -945,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -961,10 +902,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -973,7 +911,7 @@
         <state relative-caret-position="75">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -990,7 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,10 +943,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding>
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,16 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="46" column="9" lean-forward="false" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="39" column="5" lean-forward="false" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,83 +983,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Gebruiker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding>
-            <element signature="e#2193#2194#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MenuBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#1068#1069#0" expanded="false" />
-            <element signature="e#1098#1099#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/Container.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding>
-            <marker date="1496855339768" expanded="true" signature="1559:1581" ph=" SELECT statement (ROOSTERS)" />
-            <marker date="1496855339768" expanded="true" signature="2943:2978" ph=" SELECT statement (ROOSTERS)" />
-            <marker date="1496855339768" expanded="true" signature="4510:4686" ph=" UPDATE statement (ROOSTER)" />
-            <marker date="1496855339768" expanded="true" signature="5737:5769" ph=" DELETE statement (ROOSTER)" />
-            <marker date="1496855339768" expanded="true" signature="6336:6375" ph=" INSERT statement (ROOSTER)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="110" lean-forward="false" selection-start-line="24" selection-start-column="110" selection-end-line="24" selection-end-column="110" />
-          <folding>
-            <marker date="1496841636219" expanded="true" signature="1598:1618" ph=" SELECT statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="2526:2559" ph=" SELECT statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="3664:3732" ph=" UPDATE statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="4367:4398" ph=" DELETE statement (POSTEN)" />
-            <marker date="1496841636219" expanded="true" signature="4959:4994" ph=" INSERT statement (POSTEN)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="110" lean-forward="false" selection-start-line="24" selection-start-column="110" selection-end-line="24" selection-end-column="110" />
-          <folding>
-            <marker date="1496841636295" expanded="true" signature="1623:1647" ph=" SELECT statement (GEBRUIKERS)" />
-            <marker date="1496841636295" expanded="true" signature="3529:3566" ph=" SELECT statement (GEBRUIKERS)" />
-            <marker date="1496841636295" expanded="true" signature="5608:5975" ph=" UPDATE statement (GEBRUIKERS)" />
-            <marker date="1496841636295" expanded="true" signature="7175:7210" ph=" DELETE statement (GEBRUIKERS)" />
-            <marker date="1496841636295" expanded="true" signature="7781:7834" ph=" INSERT statement (GEBRUIKERS)" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RolRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="e#301#302#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <marker date="1496855427244" expanded="true" signature="1545:1565" ph=" SELECT statement (ROLLEN)" />
-            <marker date="1496855427244" expanded="true" signature="2455:2505" ph=" SELECT statement (ROLLEN)" />
-            <marker date="1496855427244" expanded="true" signature="3592:3657" ph=" UPDATE statement (ROLLEN)" />
-            <marker date="1496855427244" expanded="true" signature="4287:4318" ph=" DELETE statement (ROLLEN)" />
-            <marker date="1496855427244" expanded="true" signature="4877:4912" ph=" INSERT statement (ROLLEN)" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="1096" column="0" lean-forward="false" selection-start-line="1096" selection-start-column="0" selection-end-line="1096" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1148,53 +1005,237 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/event/ActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="49" column="16" lean-forward="false" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/javax/swing/DefaultButtonModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RolRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#301#302#0" expanded="false" />
+            <element signature="e#329#330#0" expanded="false" />
+            <marker date="1496855427244" expanded="true" signature="1545:1565" ph=" SELECT statement (ROLLEN)" />
+            <marker date="1496855427244" expanded="true" signature="2455:2505" ph=" SELECT statement (ROLLEN)" />
+            <marker date="1496855427244" expanded="true" signature="3592:3657" ph=" UPDATE statement (ROLLEN)" />
+            <marker date="1496855427244" expanded="true" signature="4287:4318" ph=" DELETE statement (ROLLEN)" />
+            <marker date="1496855427244" expanded="true" signature="4877:4912" ph=" INSERT statement (ROLLEN)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/SwingApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="255">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="49" column="83" lean-forward="false" selection-start-line="49" selection-start-column="83" selection-end-line="49" selection-end-column="83" />
+        <state relative-caret-position="782">
+          <caret line="51" column="97" lean-forward="false" selection-start-line="49" selection-start-column="83" selection-end-line="51" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/gebruikerui/GebruikerUI.java" />
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/gebruikerui/InsertGebruiker.java" />
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/InsertGebruiker.java" />
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/entities/Gebruiker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/app/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/PostRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="111" column="53" lean-forward="false" selection-start-line="111" selection-start-column="53" selection-end-line="111" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1497107114662" expanded="true" signature="1550:1570" ph=" SELECT statement (POSTEN)" />
+            <marker date="1497107114662" expanded="true" signature="2478:2511" ph=" SELECT statement (POSTEN)" />
+            <marker date="1497107114662" expanded="true" signature="3616:3684" ph=" UPDATE statement (POSTEN)" />
+            <marker date="1497107114662" expanded="true" signature="4319:4350" ph=" DELETE statement (POSTEN)" />
+            <marker date="1497107114662" expanded="true" signature="4911:4946" ph=" INSERT statement (POSTEN)" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MainFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/GebruikerRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="23" column="55" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        <state relative-caret-position="187">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <marker date="1497109644074" expanded="true" signature="7781:7834" ph=" INSERT statement (GEBRUIKERS)" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/PostUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        <state relative-caret-position="1547">
+          <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/RoosterUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <marker date="1497110780924" expanded="false" signature="6317:6336" ph=" { " />
+            <marker date="1497110780924" expanded="false" signature="6363:6377" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/GebruikerUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="47" column="47" lean-forward="false" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        <state relative-caret-position="850">
+          <caret line="63" column="49" lean-forward="false" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/InsertRooster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/repositories/RoosterRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2941">
+          <caret line="179" column="5" lean-forward="false" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
+          <folding>
+            <marker date="1497111177623" expanded="true" signature="1559:1581" ph=" SELECT statement (ROOSTERS)" />
+            <marker date="1497111177623" expanded="true" signature="2943:2978" ph=" SELECT statement (ROOSTERS)" />
+            <marker date="1497111177623" expanded="true" signature="4510:4572" ph=" UPDATE statement (ROOSTER)" />
+            <marker date="1497111177623" expanded="true" signature="4510:4684" ph=" UPDATE statement (ROOSTER)" />
+            <marker date="1497111177623" expanded="true" signature="5735:5768" ph=" DELETE statement (ROOSTER)" />
+            <marker date="1497111177623" expanded="true" signature="6335:6375" ph=" INSERT statement (ROOSTER)" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sr/unasat/bewakingsbedrijf/ui/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>bewakingsbedrijf</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -213,9 +213,9 @@ public class GebruikerRepository {
             preparedStatement.setString(6, gebruiker.getGeslacht());
             preparedStatement.setString(7, gebruiker.getGeboortedatum());
 
-            /*if (gebruiker.getRol() != null){
+            if (gebruiker.getRol() != null){
                 preparedStatement.setInt(8, gebruiker.getRol().getId());
-            }*/
+            }
 
 
             // Voer de statement uit en haal het resultaat op

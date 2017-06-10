@@ -9,10 +9,11 @@ import sr.unasat.bewakingsbedrijf.ui.MainFrame;
 public class SwingApp {
     public static void main(String[] args) {
 
-
+        //schakel de login uit om vanaf de mainframe te zien
+        //login username + password = admin
         //Login login = new Login();
 
+        //comment de mainframe uit om de login te zien
         MainFrame mainFrame = new MainFrame();
-        //plaats een comment
     }
 }

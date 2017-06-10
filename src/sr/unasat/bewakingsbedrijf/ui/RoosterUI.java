@@ -1,10 +1,13 @@
 package sr.unasat.bewakingsbedrijf.ui;
 
 import sr.unasat.bewakingsbedrijf.entities.Post;
+import sr.unasat.bewakingsbedrijf.entities.Rooster;
 import sr.unasat.bewakingsbedrijf.repositories.PostRepository;
+import sr.unasat.bewakingsbedrijf.repositories.RoosterRepository;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,64 +15,70 @@ import java.util.Arrays;
 import java.util.Vector;
 
 /**
- * Created by mitchel on 5/30/17.
+ * Created by mitchel on 6/7/17.
  */
-public class PostUI extends JPanel {
-    private JButton selectAllButton, insertButton, updateButton, deleteButton, searchButton;
+public class RoosterUI extends JPanel{
     private JList outputList;
-    private PostRepository postRepo;
-    private JPanel buttonPanel;
-    //private JTextField searchField;
+    private RoosterRepository roosterRepo;
 
     private DefaultListModel listModel;
 
     private DefaultTableModel listTableModel;
     private JTable outputTable;
+    private JButton selectAllButton, insertButton, updateButton, deleteButton;
+    private JPanel buttonPanel;
+    //private JTextField searchBar;
 
-    private void getData(){
+    public void getData(){
         // Voer SelectAll functie uit.
 
         // sr.unasat.beroeps.product.entities.Rooster database instantie is alleen 1 keer nodig
-        if (postRepo == null) {
-            postRepo = new PostRepository();
+        if (roosterRepo == null) {
+            roosterRepo = new RoosterRepository();
         }
 
         // Initialiseer de roosterRepo alleen als het moet
-        if (!postRepo.isInitialised()) {
-            postRepo.initialize();
+        if (!roosterRepo.isInitialised()) {
+            roosterRepo.initialize();
         }
 
+//        if (outputTable.getSelectedRow() > 0) {
+//            Rooster rooster = (Rooster) listTableModel.getDataVector().elementAt(outputTable.getSelectedRow());
+//        }
 
         // Alleen als de rooster database is geinitialiseerd dan verder
-        if (postRepo.isInitialised()) {
-            java.util.List<Post> outputList = postRepo.selectAll();
-
+        if (roosterRepo.isInitialised()) {
+            java.util.List<Rooster> outputList = roosterRepo.selectAll();
             // Maak de lijst leeg als er elementen inzitten
             listModel.removeAllElements();
 
             // Parse de lijst
-            for (Post post : outputList) {
-                Post record = post;
+            for (Rooster rooster : outputList) {
+                Rooster record = rooster;
                 listModel.addElement(record.toString());
             }
 
             listTableModel = (DefaultTableModel) outputTable.getModel();
             listTableModel.setRowCount(0);
             // Parse de table
-            for (Post post : outputList) {
-                Post record = post;
-                String[] colData = new String[2];
+            for (Rooster rooster : outputList) {
+                Rooster record = rooster;
+                String[] colData = new String[4];
                 colData[0] = Integer.valueOf(record.getId()).toString();
-                colData[1] = record.getLocatie();
+                if (record.getGebruiker() != null) {
+                    colData[1] = record.getGebruiker().getVoornaam();
+                }
+                if (record.getPost() != null) {
+                    colData[2] = record.getPost().getLocatie();
+                }
+                colData[3] = record.getDatum();
                 listTableModel.addRow(colData);
             }
             outputTable.setModel(listTableModel);
         }
-
     }
-
-    public PostUI(){
-        postRepo = new PostRepository();
+    public RoosterUI(){
+        roosterRepo = new RoosterRepository();
 
         //Buttons initializen
         selectAllButton = new JButton("Select All");
@@ -105,59 +114,61 @@ public class PostUI extends JPanel {
         //outputPanel.add(listPanel);
 
         listTableModel = new DefaultTableModel();
-        String[] colnames = {"id", "locatie"};
+        String[] colnames = {"id", "voornaam", "post", "locatie"};
         Vector colnamesV = new Vector(Arrays.asList(colnames));
         outputTable = new JTable(null, colnamesV);
         JScrollPane tablePanel = new JScrollPane(outputTable);
         tablePanel.setPreferredSize(new Dimension(800, 150));
-        outputPanel.add(tablePanel);;
-
-
+        outputPanel.add(tablePanel);
 
         // Select listener
         selectAllButton.addActionListener(new ActionListener() {
-
+            @Override
             public void actionPerformed(ActionEvent arg) {
-               getData();
-
+                getData();
             }
         });
 
+        // Insert listener
         insertButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                InsertPost insertPost= new InsertPost();
-
-            }
-
-        });
-
-        deleteButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
-                PostRepository postRepository = new PostRepository();
-                postRepository.deleteRecord(id);
-
-                getData();
+            public void actionPerformed(ActionEvent actionEvent) {
+                // open InsertRooster popup
+                InsertRooster insertRooster = new InsertRooster();
             }
         });
 
         updateButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                // get selected row id
+
                 int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
-                UpdatePost updatePost = new UpdatePost(id);
+                UpdateRooster updateRooster = new UpdateRooster(id);
             }
         });
 
-       /* searchButton.addActionListener(new ActionListener() {
+        deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
+                // get selected value id
+                int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
+
+                RoosterRepository roosterRepository = new RoosterRepository();
+                roosterRepository.deleteRecord(id);
+
+                // refresh the table
+                getData();
+            }
+        });
+
+        /*searchBar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("jaja");
             }
         });*/
-
     }
 }

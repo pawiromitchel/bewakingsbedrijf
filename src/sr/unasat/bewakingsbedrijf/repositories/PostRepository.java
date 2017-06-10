@@ -1,7 +1,6 @@
 package sr.unasat.bewakingsbedrijf.repositories;
 
 import sr.unasat.bewakingsbedrijf.entities.Post;
-import sr.unasat.bewakingsbedrijf.entities.Rol;
 
 import java.sql.*;
 import java.util.ArrayList;

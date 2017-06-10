@@ -128,10 +128,10 @@ public class RoosterRepository {
         int result = 0;
 
         try {
-            preparedStatement = connect.prepareStatement("update rooster set " +
-                    " gebruiker_id = ?," +
-                    " post_id = ?, " +
-                    " datum = ?, " +
+            preparedStatement = connect.prepareStatement("update roosters set " +
+                    " gebruiker_id = ?" +
+                    " post_id = ? " +
+                    " datum = ? " +
                     " where id = ?");
             if (rooster.getGebruiker() != null) {
                 preparedStatement.setInt(1, rooster.getGebruiker().getId());
@@ -165,7 +165,7 @@ public class RoosterRepository {
         int result = 0;
 
         try {
-            preparedStatement = connect.prepareStatement("delete from rooster where id = ?");
+            preparedStatement = connect.prepareStatement("delete from roosters where id = ?");
             preparedStatement.setInt(1, recordId);
 
             // Voer de statement uit en haal het resultaat op
@@ -185,7 +185,7 @@ public class RoosterRepository {
         int result = 0;
 
         try {
-            preparedStatement = connect.prepareStatement("insert into rooster values (NULL,?,?,?)");
+            preparedStatement = connect.prepareStatement("insert into roosters values (NULL,?,?,?)");
             if (rooster.getGebruiker() != null) {
                 preparedStatement.setInt(1, rooster.getGebruiker().getId());
             } else {

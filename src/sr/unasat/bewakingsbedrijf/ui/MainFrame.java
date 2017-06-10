@@ -1,5 +1,6 @@
 package sr.unasat.bewakingsbedrijf.ui;
 
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -23,6 +24,7 @@ public class MainFrame extends JFrame {
         //  Place Student
         tabbedPane.add("Gebruiker", new GebruikerUI());
         tabbedPane.add("Posten", new PostUI());
+        tabbedPane.add("Rooster", new RoosterUI());
 
         //  Place Rooster
 //        tabbedPane.add("Rooster", new RoosterUI());
