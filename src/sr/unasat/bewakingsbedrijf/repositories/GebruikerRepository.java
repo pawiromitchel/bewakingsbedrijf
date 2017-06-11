@@ -71,7 +71,7 @@ public class GebruikerRepository {
                 gebruiker.setWoonplaats(woonplaats);
                 gebruiker.setIdnummer(idnummer);
                 gebruiker.setGeslacht(geslacht);
-                gebruiker.setGeslacht(geboortedatum);
+                gebruiker.setGeboortedatum(geboortedatum);
 
                 if(rol_id > 0){
                     gebruiker.setRol(new RolRepository().selectRecord(rol_id));
@@ -123,7 +123,7 @@ public class GebruikerRepository {
                 gebruiker.setWoonplaats(woonplaats);
                 gebruiker.setIdnummer(idnummer);
                 gebruiker.setGeslacht(geslacht);
-                gebruiker.setGeslacht(geboortedatum);
+                gebruiker.setGeboortedatum(geboortedatum);
 
                 if(rol_id > 0){
                     gebruiker.setRol(new RolRepository().selectRecord(rol_id));

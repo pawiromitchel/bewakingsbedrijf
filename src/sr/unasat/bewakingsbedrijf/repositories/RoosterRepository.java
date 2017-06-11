@@ -129,8 +129,8 @@ public class RoosterRepository {
 
         try {
             preparedStatement = connect.prepareStatement("update roosters set " +
-                    " gebruiker_id = ?" +
-                    " post_id = ? " +
+                    " gebruiker_id = ?," +
+                    " post_id = ?, " +
                     " datum = ? " +
                     " where id = ?");
             if (rooster.getGebruiker() != null) {

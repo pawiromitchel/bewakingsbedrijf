@@ -11,6 +11,8 @@ import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Arrays;
 import java.util.Vector;
 
@@ -25,8 +27,11 @@ public class RoosterUI extends JPanel{
 
     private DefaultTableModel listTableModel;
     private JTable outputTable;
-    private JButton selectAllButton, insertButton, updateButton, deleteButton;
+    private JButton selectAllButton, insertButton, updateButton, deleteButton, searchButton;
     private JPanel buttonPanel;
+    private JTextField searchField;
+    private TableRowSorter tableRowSorter;
+    private JLabel searchLabel;
     //private JTextField searchBar;
 
     public void getData(){
@@ -41,10 +46,6 @@ public class RoosterUI extends JPanel{
         if (!roosterRepo.isInitialised()) {
             roosterRepo.initialize();
         }
-
-//        if (outputTable.getSelectedRow() > 0) {
-//            Rooster rooster = (Rooster) listTableModel.getDataVector().elementAt(outputTable.getSelectedRow());
-//        }
 
         // Alleen als de rooster database is geinitialiseerd dan verder
         if (roosterRepo.isInitialised()) {
@@ -77,11 +78,21 @@ public class RoosterUI extends JPanel{
             outputTable.setModel(listTableModel);
         }
     }
+
+    private void filterData(String query){
+        DefaultTableModel tableModel = (DefaultTableModel) outputTable.getModel();
+
+        tableRowSorter = new TableRowSorter<DefaultTableModel>(tableModel);
+        outputTable.setRowSorter(tableRowSorter);
+
+        tableRowSorter.setRowFilter(RowFilter.regexFilter(query));
+    }
+
     public RoosterUI(){
         roosterRepo = new RoosterRepository();
 
         //Buttons initializen
-        selectAllButton = new JButton("Select All");
+        selectAllButton = new JButton("Refresh");
         selectAllButton.setBackground(Color.green);
         insertButton = new JButton("Insert");
         insertButton.setBackground(Color.lightGray);
@@ -89,6 +100,8 @@ public class RoosterUI extends JPanel{
         updateButton.setBackground(Color.lightGray);
         deleteButton = new JButton("Delete");
         deleteButton.setBackground(Color.red);
+
+        searchButton = new JButton("Search");
 
         buttonPanel = new JPanel(new GridLayout(4, 1, 5, 4));
         buttonPanel.add(selectAllButton);
@@ -103,6 +116,17 @@ public class RoosterUI extends JPanel{
         JPanel outputPanel = new JPanel();
         outputPanel.setLayout(new BoxLayout(outputPanel, BoxLayout.Y_AXIS));
         add(outputPanel, BorderLayout.CENTER);
+
+        //searchpanel
+        //Initialize Searchfield and label
+        searchLabel = new JLabel("Search");
+        searchField = new JTextField("");
+        searchField.setPreferredSize(new Dimension(200,20));
+        JPanel searchPanel= new JPanel();
+        searchPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        searchPanel.add(searchLabel);
+        searchPanel.add(searchField);
+        outputPanel.add(searchPanel);
 
         listModel = new DefaultListModel();
         outputList = new JList(listModel);
@@ -120,6 +144,9 @@ public class RoosterUI extends JPanel{
         JScrollPane tablePanel = new JScrollPane(outputTable);
         tablePanel.setPreferredSize(new Dimension(800, 150));
         outputPanel.add(tablePanel);
+
+        // run the method instantly
+        getData();
 
         // Select listener
         selectAllButton.addActionListener(new ActionListener() {
@@ -143,8 +170,9 @@ public class RoosterUI extends JPanel{
             public void actionPerformed(ActionEvent actionEvent) {
 
                 // get selected row id
-
                 int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
+
+                // run the frame
                 UpdateRooster updateRooster = new UpdateRooster(id);
             }
         });
@@ -156,11 +184,34 @@ public class RoosterUI extends JPanel{
                 // get selected value id
                 int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
 
-                RoosterRepository roosterRepository = new RoosterRepository();
-                roosterRepository.deleteRecord(id);
+                int dialogButton = JOptionPane.YES_NO_OPTION;
+                int dialogResult = JOptionPane.showConfirmDialog (null, "Would you like to delete id: " + id + " ?","Confirm Deletion",dialogButton);
+                if(dialogResult == JOptionPane.YES_OPTION){
+                    // delete the specific id
+                    RoosterRepository roosterRepository = new RoosterRepository();
+                    roosterRepository.deleteRecord(id);
 
-                // refresh the table
-                getData();
+                    // refresh the table
+                    getData();
+                }
+            }
+        });
+
+        searchField.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent keyEvent) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent keyEvent) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent keyEvent) {
+                filterData(searchField.getText());
+
             }
         });
 

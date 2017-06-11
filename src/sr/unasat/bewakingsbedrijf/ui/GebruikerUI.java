@@ -4,13 +4,13 @@ import sr.unasat.bewakingsbedrijf.entities.Gebruiker;
 import sr.unasat.bewakingsbedrijf.entities.Rol;
 import sr.unasat.bewakingsbedrijf.repositories.GebruikerRepository;
 import sr.unasat.bewakingsbedrijf.repositories.RolRepository;
+import sr.unasat.bewakingsbedrijf.repositories.RoosterRepository;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.sql.Connection;
 import java.util.*;
 import java.util.List;
@@ -25,9 +25,78 @@ public class GebruikerUI extends JPanel{
         private DefaultListModel listModel;
         private DefaultTableModel listTableModel;
         private JTable outputTable;
-        private JButton selectAllButton, insertButton, updateButton, deleteButton;
+        private JButton selectAllButton, insertButton, updateButton, deleteButton, searchButton;
         private JPanel buttonPanel;
 
+        private JTextField searchField;
+        private TableRowSorter tableRowSorter;
+        private JLabel searchLabel;
+
+        void getData(){
+            // Voer SelectAll functie uit.
+
+            // sr.unasat.beroeps.product.entities.Rooster database instantie is alleen 1 keer nodig
+            if (gebruikerRepo == null) {
+                gebruikerRepo = new GebruikerRepository();
+            }
+
+            // Initialiseer de roosterRepo alleen als het moet
+            if (!gebruikerRepo.isInitialised()) {
+                gebruikerRepo.initialize();
+            }
+
+            if (outputTable.getSelectedRow() > 0) {
+                Gebruiker gebruiker = (Gebruiker) listTableModel.getDataVector().elementAt(outputTable.getSelectedRow());
+                System.out.println(gebruiker);
+            }
+
+            // Alleen als de rooster database is geinitialiseerd dan verder
+            if (gebruikerRepo.isInitialised()) {
+                List<Gebruiker> outputList = gebruikerRepo.selectAll();
+
+                // Maak de lijst leeg als er elementen inzitten
+                listModel.removeAllElements();
+
+                // Parse de lijst
+                for (Gebruiker gebruiker : outputList) {
+                    Gebruiker record = gebruiker;
+                    listModel.addElement(record.toString());
+                }
+
+                listTableModel = (DefaultTableModel) outputTable.getModel();
+                listTableModel.setRowCount(0);
+                // Parse de table
+                for (Gebruiker gebruiker : outputList) {
+                    Gebruiker record = gebruiker;
+                    System.out.println(record.getGeboortedatum());
+                    String[] colData = new String[9];
+                    colData[0] = Integer.valueOf(record.getId()).toString();
+                    colData[1] = record.getAchternaam();
+                    colData[2] = record.getVoornaam();
+                    colData[3] = record.getAdres();
+                    colData[4] = record.getWoonplaats();
+                    colData[5] = record.getIdnummer();
+                    colData[6] = record.getGeslacht();
+                    colData[7] = record.getGeboortedatum();
+                    if (record.getRol() != null) {
+                        colData[8] = record.getRol().getNaam();
+                    }
+                    listTableModel.addRow(colData);
+                }
+                outputTable.setModel(listTableModel);
+            }
+        }
+
+
+
+        private void filterData(String query){
+            DefaultTableModel tableModel = (DefaultTableModel) outputTable.getModel();
+
+            tableRowSorter = new TableRowSorter<DefaultTableModel>(tableModel);
+            outputTable.setRowSorter(tableRowSorter);
+
+            tableRowSorter.setRowFilter(RowFilter.regexFilter(query));
+        }
 
         public GebruikerUI() {
             gebruikerRepo = new GebruikerRepository();
@@ -41,6 +110,8 @@ public class GebruikerUI extends JPanel{
             updateButton.setBackground(Color.lightGray);
             deleteButton = new JButton("Delete");
             deleteButton.setBackground(Color.red);
+
+            searchButton = new JButton("Search");
 
             buttonPanel = new JPanel(new GridLayout(4, 1, 5, 4));
             buttonPanel.add(selectAllButton);
@@ -65,70 +136,32 @@ public class GebruikerUI extends JPanel{
             listPanel.setPreferredSize(new Dimension(800, 150));
             //outputPanel.add(listPanel);
 
+            //searchpanel
+            //Initialize Searchfield and label
+            searchLabel = new JLabel("Search");
+            searchField = new JTextField("");
+            searchField.setPreferredSize(new Dimension(200,20));
+            JPanel searchPanel= new JPanel();
+            searchPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+            searchPanel.add(searchLabel);
+            searchPanel.add(searchField);
+            outputPanel.add(searchPanel);
+
             listTableModel = new DefaultTableModel();
-            String[] colnames = {"id", "achternaam", "voornaam", "adres", "woonplaats", "idnummer", "geboortedatum"
-                    , "geslacht", "rol_id"};
+            String[] colnames = {"id", "achternaam", "voornaam", "adres", "woonplaats", "idnummer", "geslacht"
+                    , "geboortedatum", "rol"};
             Vector colnamesV = new Vector(Arrays.asList(colnames));
             outputTable = new JTable(null, colnamesV);
             JScrollPane tablePanel = new JScrollPane(outputTable);
             tablePanel.setPreferredSize(new Dimension(800, 150));
             outputPanel.add(tablePanel);
 
+            getData();
+
             //'Select All' button
             selectAllButton.addActionListener(new ActionListener() {
-
                 public void actionPerformed(ActionEvent arg) {
-                    // Voer SelectAll functie uit.
-
-                    // sr.unasat.beroeps.product.entities.Rooster database instantie is alleen 1 keer nodig
-                    if (gebruikerRepo == null) {
-                        gebruikerRepo = new GebruikerRepository();
-                    }
-
-                    // Initialiseer de roosterRepo alleen als het moet
-                    if (!gebruikerRepo.isInitialised()) {
-                        gebruikerRepo.initialize();
-                    }
-
-                    if (outputTable.getSelectedRow() > 0) {
-                        Gebruiker gebruiker = (Gebruiker) listTableModel.getDataVector().elementAt(outputTable.getSelectedRow());
-                        System.out.println(gebruiker);
-                    }
-
-                    // Alleen als de rooster database is geinitialiseerd dan verder
-                    if (gebruikerRepo.isInitialised()) {
-                        List<Gebruiker> outputList = gebruikerRepo.selectAll();
-
-                        // Maak de lijst leeg als er elementen inzitten
-                        listModel.removeAllElements();
-
-                        // Parse de lijst
-                        for (Gebruiker gebruiker : outputList) {
-                            Gebruiker record = gebruiker;
-                            listModel.addElement(record.toString());
-                        }
-
-                        listTableModel = (DefaultTableModel) outputTable.getModel();
-                        listTableModel.setRowCount(0);
-                        // Parse de table
-                        for (Gebruiker gebruiker : outputList) {
-                            Gebruiker record = gebruiker;
-                            String[] colData = new String[9];
-                            colData[0] = Integer.valueOf(record.getId()).toString();
-                            colData[1] = record.getAchternaam();
-                            colData[2] = record.getVoornaam();
-                            colData[3] = record.getAdres();
-                            colData[4] = record.getWoonplaats();
-                            colData[5] = record.getIdnummer();
-                            colData[6] = record.getGeslacht();
-                            colData[7] = record.getGeboortedatum();
-                            if (record.getRol() != null) {
-                                colData[8] = record.getRol().getNaam();
-                            }
-                            listTableModel.addRow(colData);
-                        }
-                        outputTable.setModel(listTableModel);
-                    }
+                    getData();
                 }
             });
 
@@ -248,13 +281,8 @@ public class GebruikerUI extends JPanel{
             updateButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    JFrame update = new JFrame("Update");
-
-                    GebruikerRepository gebruikerRepository = new GebruikerRepository();
-                    //Gebruiker gebruiker = gebruikerRepository.updateRecord();
-                    //int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
-                    update.setSize(500, 250);
-                    update.setVisible(true);
+                    int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
+                    UpdateGebruiker updateGebruiker = new UpdateGebruiker(id);
                 }
             });
 
@@ -262,9 +290,38 @@ public class GebruikerUI extends JPanel{
             deleteButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
+                    int dialogButton = JOptionPane.YES_NO_OPTION;
+                    int dialogResult = JOptionPane.showConfirmDialog (null, "Would you like to delete id: " + id + " ?","Confirm Deletion",dialogButton);
+                    if(dialogResult == JOptionPane.YES_OPTION){
+                        // delete the specific id
+                        GebruikerRepository gebruikerRepository = new GebruikerRepository();
+                        gebruikerRepository.deleteRecord(id);
+
+                        //refresh
+                        getData();
+                    }
                 }
             });
+
+            // Search keylistener
+            searchField.addKeyListener(new KeyListener() {
+                @Override
+                public void keyTyped(KeyEvent keyEvent) {
+
+                }
+
+                @Override
+                public void keyPressed(KeyEvent keyEvent) {
+
+                }
+
+                @Override
+                public void keyReleased(KeyEvent keyEvent) {
+                    filterData(searchField.getText());
+
+                }
+            });
+
         }
-
-
     }

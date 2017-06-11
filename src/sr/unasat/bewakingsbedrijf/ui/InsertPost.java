@@ -50,5 +50,4 @@ public class InsertPost extends JFrame{
                 }
             });
         }
-
     }

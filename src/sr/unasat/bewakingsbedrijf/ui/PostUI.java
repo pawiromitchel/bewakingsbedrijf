@@ -5,9 +5,12 @@ import sr.unasat.bewakingsbedrijf.repositories.PostRepository;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Arrays;
 import java.util.Vector;
 
@@ -25,6 +28,10 @@ public class PostUI extends JPanel {
 
     private DefaultTableModel listTableModel;
     private JTable outputTable;
+
+    private JTextField searchField;
+    private TableRowSorter tableRowSorter;
+    private JLabel searchLabel;
 
     private void getData(){
         // Voer SelectAll functie uit.
@@ -65,7 +72,15 @@ public class PostUI extends JPanel {
             }
             outputTable.setModel(listTableModel);
         }
+    }
 
+    private void filterData(String query){
+        DefaultTableModel tableModel = (DefaultTableModel) outputTable.getModel();
+
+        tableRowSorter = new TableRowSorter<DefaultTableModel>(tableModel);
+        outputTable.setRowSorter(tableRowSorter);
+
+        tableRowSorter.setRowFilter(RowFilter.regexFilter(query));
     }
 
     public PostUI(){
@@ -80,6 +95,7 @@ public class PostUI extends JPanel {
         updateButton.setBackground(Color.lightGray);
         deleteButton = new JButton("Delete");
         deleteButton.setBackground(Color.red);
+        searchButton = new JButton("Search");
 
         buttonPanel = new JPanel(new GridLayout(4, 1, 5, 4));
         buttonPanel.add(selectAllButton);
@@ -94,6 +110,17 @@ public class PostUI extends JPanel {
         JPanel outputPanel = new JPanel();
         outputPanel.setLayout(new BoxLayout(outputPanel, BoxLayout.Y_AXIS));
         add(outputPanel, BorderLayout.CENTER);
+
+        //searchpanel
+        //Initialize Searchfield and label
+        searchLabel = new JLabel("Search");
+        searchField = new JTextField("");
+        searchField.setPreferredSize(new Dimension(200,20));
+        JPanel searchPanel= new JPanel();
+        searchPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        searchPanel.add(searchLabel);
+        searchPanel.add(searchField);
+        outputPanel.add(searchPanel);
 
         listModel = new DefaultListModel();
         outputList = new JList(listModel);
@@ -112,7 +139,7 @@ public class PostUI extends JPanel {
         tablePanel.setPreferredSize(new Dimension(800, 150));
         outputPanel.add(tablePanel);;
 
-
+        getData();
 
         // Select listener
         selectAllButton.addActionListener(new ActionListener() {
@@ -151,6 +178,27 @@ public class PostUI extends JPanel {
                 UpdatePost updatePost = new UpdatePost(id);
             }
         });
+
+
+        // Search keylistener
+        searchField.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent keyEvent) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent keyEvent) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent keyEvent) {
+                filterData(searchField.getText());
+
+            }
+        });
+
 
        /* searchButton.addActionListener(new ActionListener() {
             @Override
