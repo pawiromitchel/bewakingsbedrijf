@@ -148,8 +148,8 @@ public class GebruikerUI extends JPanel{
             outputPanel.add(searchPanel);
 
             listTableModel = new DefaultTableModel();
-            String[] colnames = {"id", "achternaam", "voornaam", "adres", "woonplaats", "idnummer", "geslacht"
-                    , "geboortedatum", "rol"};
+            String[] colnames = {"Id", "Achternaam", "Voornaam", "Adres", "Woonplaats", "ID-Nummer", "Geslacht"
+                    , "Geboortedatum", "Rol"};
             Vector colnamesV = new Vector(Arrays.asList(colnames));
             outputTable = new JTable(null, colnamesV);
             JScrollPane tablePanel = new JScrollPane(outputTable);

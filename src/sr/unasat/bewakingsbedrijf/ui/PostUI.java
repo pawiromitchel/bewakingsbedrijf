@@ -132,7 +132,7 @@ public class PostUI extends JPanel {
         //outputPanel.add(listPanel);
 
         listTableModel = new DefaultTableModel();
-        String[] colnames = {"id", "locatie"};
+        String[] colnames = {"Id", "Post Locatie"};
         Vector colnamesV = new Vector(Arrays.asList(colnames));
         outputTable = new JTable(null, colnamesV);
         JScrollPane tablePanel = new JScrollPane(outputTable);

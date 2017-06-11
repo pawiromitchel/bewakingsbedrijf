@@ -22,7 +22,7 @@ public class UpdatePost extends JFrame {
 
         // post component
         JLabel postLabel = new JLabel("post");
-        JTextField postInput = new JTextField();
+        JTextField postInput = new JTextField(post.getLocatie());
 
         //button
         JButton submitButton = new JButton("aanpassen");
@@ -41,6 +41,7 @@ public class UpdatePost extends JFrame {
         insertPost.setBounds(100, 100, 450, 300);
         insertPost.getContentPane().setLayout(null);
         insertPost.setVisible(true);
+        insertPost.setTitle("Post aanpassen");
 
         submitButton.addActionListener(new ActionListener() {
             @Override

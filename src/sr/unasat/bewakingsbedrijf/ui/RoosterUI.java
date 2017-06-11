@@ -67,7 +67,7 @@ public class RoosterUI extends JPanel{
                 String[] colData = new String[4];
                 colData[0] = Integer.valueOf(record.getId()).toString();
                 if (record.getGebruiker() != null) {
-                    colData[1] = record.getGebruiker().getVoornaam();
+                    colData[1] = record.getGebruiker().getVoornaam() + " " + record.getGebruiker().getAchternaam();
                 }
                 if (record.getPost() != null) {
                     colData[2] = record.getPost().getLocatie();
@@ -138,7 +138,7 @@ public class RoosterUI extends JPanel{
         //outputPanel.add(listPanel);
 
         listTableModel = new DefaultTableModel();
-        String[] colnames = {"id", "voornaam", "post", "locatie"};
+        String[] colnames = {"Id", "Naam", "Post locatie", "Datum ingeroosterd"};
         Vector colnamesV = new Vector(Arrays.asList(colnames));
         outputTable = new JTable(null, colnamesV);
         JScrollPane tablePanel = new JScrollPane(outputTable);
