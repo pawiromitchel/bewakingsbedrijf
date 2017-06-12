@@ -12,8 +12,6 @@ import java.sql.*;
  */
 public class Login extends JFrame{
     public Login() {
-        super("Login Screen");
-
         JLabel usernameLabel = new JLabel("Username");
         JLabel passwordLabel = new JLabel("Password");
         JTextField usernameField = new JTextField();
@@ -26,7 +24,7 @@ public class Login extends JFrame{
         passwordField.setBounds(180, 100, 120, 20);
         loginBtn.setBounds(120, 125, 80, 20);
 
-        JFrame login = new JFrame();
+        JFrame login = new JFrame("Login screen");
         login.setBounds(100, 100, 450, 300);
         login.getContentPane().setLayout(null);
         login.setVisible(true);

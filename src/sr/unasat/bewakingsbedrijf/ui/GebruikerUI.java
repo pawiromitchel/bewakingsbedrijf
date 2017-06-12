@@ -110,8 +110,10 @@ public class GebruikerUI extends JPanel{
             updateButton.setBackground(Color.lightGray);
             deleteButton = new JButton("Delete");
             deleteButton.setBackground(Color.red);
-
             searchButton = new JButton("Search");
+
+            updateButton.setToolTipText("Selecteer een record voor update");
+            deleteButton.setToolTipText("Selecteer een record om te verwijderen");
 
             buttonPanel = new JPanel(new GridLayout(4, 1, 5, 4));
             buttonPanel.add(selectAllButton);
@@ -169,7 +171,7 @@ public class GebruikerUI extends JPanel{
             insertButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    JFrame insert = new JFrame();
+                    JFrame insert = new JFrame("Gebruiker Toevoegen");
 
                     JLabel achternaamLabel = new JLabel("Achternaam");
                     JLabel voornaamLabel = new JLabel("Voornaam");
@@ -265,12 +267,13 @@ public class GebruikerUI extends JPanel{
                             GebruikerRepository gebruikerRepository = new GebruikerRepository();
                             gebruikerRepository.insertRecord(newGebruiker);
 
-                            JOptionPane.showMessageDialog(null, "Submitted!");
+                            JOptionPane.showMessageDialog(null, "Gebruiker toegevoegd");
 
                             WindowEvent winClosingEvent = new WindowEvent(insert, WindowEvent.WINDOW_CLOSING);
                             Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
-                            MainFrame mainFrame = new MainFrame();
                             setVisible(true);
+
+                            getData();
                         }
                     });
                 }
@@ -282,6 +285,8 @@ public class GebruikerUI extends JPanel{
                 public void actionPerformed(ActionEvent e) {
                     int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
                     UpdateGebruiker updateGebruiker = new UpdateGebruiker(id);
+
+                    getData();
                 }
             });
 

@@ -11,9 +11,9 @@ public class SwingApp {
 
         //schakel de login uit om vanaf de mainframe te zien
         //login username + password = admin
-        //Login login = new Login();
+        Login login = new Login();
 
         //comment de mainframe uit om de login te zien
-        MainFrame mainFrame = new MainFrame();
+        //MainFrame mainFrame = new MainFrame();
     }
 }

@@ -97,6 +97,9 @@ public class PostUI extends JPanel {
         deleteButton.setBackground(Color.red);
         searchButton = new JButton("Search");
 
+        updateButton.setToolTipText("Selecteer een record voor update");
+        deleteButton.setToolTipText("Selecteer een record om te verwijderen");
+
         buttonPanel = new JPanel(new GridLayout(4, 1, 5, 4));
         buttonPanel.add(selectAllButton);
         buttonPanel.add(insertButton);
@@ -155,6 +158,7 @@ public class PostUI extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 InsertPost insertPost= new InsertPost();
 
+                getData();
             }
 
         });
@@ -176,6 +180,8 @@ public class PostUI extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
                 UpdatePost updatePost = new UpdatePost(id);
+
+                getData();
             }
         });
 

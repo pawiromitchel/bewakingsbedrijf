@@ -10,8 +10,10 @@ import sr.unasat.bewakingsbedrijf.repositories.RoosterRepository;
 import sr.unasat.bewakingsbedrijf.repositories.ShiftRepository;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.util.List;
 
 /**
@@ -19,14 +21,13 @@ import java.util.List;
  */
 public class UpdateRooster extends JFrame{
     public UpdateRooster(int id){
-        super("Ingeroosterde bewaker aanpassen");
 
         // get specific rooster
         RoosterRepository roosterRepository = new RoosterRepository();
         Rooster rooster = roosterRepository.selectRecord(id);
 
         // init frame
-        JFrame insertRooster = new JFrame();
+        JFrame roosterUpdate = new JFrame("Rooster bewerken");
 
         // gebruiker component
         JLabel gebruikerLabel = new JLabel("Gebruiker");
@@ -77,21 +78,21 @@ public class UpdateRooster extends JFrame{
         submitButton.setBounds(140, 165, 150, 20);
 
         // add components
-        insertRooster.getContentPane().add(gebruikerLabel);
-        insertRooster.getContentPane().add(gebruikerComboBox);
-        insertRooster.getContentPane().add(postLabel);
-        insertRooster.getContentPane().add(postComboBox);
-        insertRooster.getContentPane().add(shiftLabel);
-        insertRooster.getContentPane().add(shiftComboBox);
-        insertRooster.getContentPane().add(datumLabel);
-        insertRooster.getContentPane().add(datumInput);
-        insertRooster.getContentPane().add(submitButton);
+        roosterUpdate.getContentPane().add(gebruikerLabel);
+        roosterUpdate.getContentPane().add(gebruikerComboBox);
+        roosterUpdate.getContentPane().add(postLabel);
+        roosterUpdate.getContentPane().add(postComboBox);
+        roosterUpdate.getContentPane().add(shiftLabel);
+        roosterUpdate.getContentPane().add(shiftComboBox);
+        roosterUpdate.getContentPane().add(datumLabel);
+        roosterUpdate.getContentPane().add(datumInput);
+        roosterUpdate.getContentPane().add(submitButton);
 
         // set visible
-        insertRooster.setBounds(100, 100, 450, 300);
-        insertRooster.getContentPane().setLayout(null);
-        insertRooster.setVisible(true);
-        insertRooster.setTitle("Ingeroosterde bewaker aanpassen");
+        roosterUpdate.setBounds(100, 100, 450, 300);
+        roosterUpdate.getContentPane().setLayout(null);
+        roosterUpdate.setVisible(true);
+        roosterUpdate.setTitle("Ingeroosterde bewaker aanpassen");
 
         submitButton.addActionListener(new ActionListener() {
             @Override
@@ -125,6 +126,9 @@ public class UpdateRooster extends JFrame{
                 Rooster newRooster = new Rooster(id, gebruiker, post, shift, datumInput.getText());
                 RoosterRepository roosterRepository = new RoosterRepository();
                 roosterRepository.updateRecord(newRooster);
+
+                WindowEvent winClosingEvent = new WindowEvent(roosterUpdate, WindowEvent.WINDOW_CLOSING);
+                Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
             }
         });
     }

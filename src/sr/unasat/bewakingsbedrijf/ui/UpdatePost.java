@@ -4,28 +4,29 @@ import sr.unasat.bewakingsbedrijf.entities.Post;
 import sr.unasat.bewakingsbedrijf.repositories.PostRepository;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 /**
  * Created by Patrice on 6/10/2017.
  */
 public class UpdatePost extends JFrame {
     public UpdatePost (int id){
-        super ("Locatie aanpassen");
 
         //get specific post
         PostRepository postRepository = new PostRepository();
         Post post = postRepository.selectRecord(id);
 
-        JFrame insertPost = new JFrame();
+        JFrame postUpdate = new JFrame("Locatie bewerken");
 
         // post component
-        JLabel postLabel = new JLabel("post");
+        JLabel postLabel = new JLabel("Post");
         JTextField postInput = new JTextField(post.getLocatie());
 
         //button
-        JButton submitButton = new JButton("aanpassen");
+        JButton submitButton = new JButton("Aanpassen");
 
         //position components
         postLabel.setBounds(100, 120, 120, 20);
@@ -33,15 +34,15 @@ public class UpdatePost extends JFrame {
         submitButton.setBounds(140, 145, 150, 20);
 
         //add components
-        insertPost.getContentPane().add(postLabel);
-        insertPost.getContentPane().add(postInput);
-        insertPost.getContentPane().add(submitButton);
+        postUpdate.getContentPane().add(postLabel);
+        postUpdate.getContentPane().add(postInput);
+        postUpdate.getContentPane().add(submitButton);
 
         //set visible
-        insertPost.setBounds(100, 100, 450, 300);
-        insertPost.getContentPane().setLayout(null);
-        insertPost.setVisible(true);
-        insertPost.setTitle("Post aanpassen");
+        postUpdate.setBounds(100, 100, 450, 300);
+        postUpdate.getContentPane().setLayout(null);
+        postUpdate.setVisible(true);
+        postUpdate.setTitle("Post Aanpassen");
 
         submitButton.addActionListener(new ActionListener() {
             @Override
@@ -50,6 +51,9 @@ public class UpdatePost extends JFrame {
                 Post newPost = new Post(id, postInput.getText());
                 PostRepository postRepository = new PostRepository();
                 postRepository.updateRecord(newPost);
+
+                WindowEvent winClosingEvent = new WindowEvent(postUpdate, WindowEvent.WINDOW_CLOSING);
+                Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
             }
         });
     }

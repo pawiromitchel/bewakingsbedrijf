@@ -6,8 +6,10 @@ import sr.unasat.bewakingsbedrijf.repositories.GebruikerRepository;
 import sr.unasat.bewakingsbedrijf.repositories.RolRepository;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.util.List;
 
 /**
@@ -15,13 +17,12 @@ import java.util.List;
  */
 public class UpdateGebruiker extends JFrame {
     public UpdateGebruiker (int id){
-        super("Gebruiker Aanpassen");
 
         //get Gebruiker
         GebruikerRepository gebruikerRepository = new GebruikerRepository();
         Gebruiker gebruiker = gebruikerRepository.selectRecord(id);
 
-        JFrame updateGebruiker = new JFrame();
+        JFrame updateGebruiker = new JFrame("Gebruiker bewerken");
 
         //componenten
         JLabel achternaamLabel = new JLabel("Achternaam");
@@ -115,11 +116,14 @@ public class UpdateGebruiker extends JFrame {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Gebruiker updateGebruiker = new Gebruiker(0, rol, voornaamValue, achternaamValue, adresValue, woonplaatsValue,
+                Gebruiker gebruikerUpdate = new Gebruiker(0, rol, voornaamValue, achternaamValue, adresValue, woonplaatsValue,
                         idnummerValue, geslachtValue, geboortedatumValue);
 
                 GebruikerRepository gebruikerRepository = new GebruikerRepository();
-                gebruikerRepository.updateRecord(updateGebruiker);
+                gebruikerRepository.updateRecord(gebruikerUpdate);
+
+                WindowEvent winClosingEvent = new WindowEvent(updateGebruiker, WindowEvent.WINDOW_CLOSING);
+                Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
             }
         });
     }

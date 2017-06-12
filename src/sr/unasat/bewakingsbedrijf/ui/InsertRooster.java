@@ -4,8 +4,10 @@ import sr.unasat.bewakingsbedrijf.entities.*;
 import sr.unasat.bewakingsbedrijf.repositories.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.util.List;
 
@@ -14,10 +16,8 @@ import java.util.List;
  */
 public class InsertRooster extends JFrame {
     public InsertRooster(){
-        super("Bewaker Inroosteren");
-
         // init frame
-        JFrame insertRooster = new JFrame();
+        JFrame insertRooster = new JFrame("Rooster toevoegen");
 
         // gebruiker component
         JLabel gebruikerLabel = new JLabel("Gebruiker");
@@ -115,6 +115,11 @@ public class InsertRooster extends JFrame {
                 Rooster newRooster = new Rooster(6, gebruiker, post, shift, datumInput.getText());
                 RoosterRepository roosterRepository = new RoosterRepository();
                 roosterRepository.insertRecord(newRooster);
+                JOptionPane.showMessageDialog(null,"Rooster toegevoegd");
+
+
+                WindowEvent winClosingEvent = new WindowEvent(insertRooster, WindowEvent.WINDOW_CLOSING);
+                Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
             }
         });
     }

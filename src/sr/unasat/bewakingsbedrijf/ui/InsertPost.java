@@ -4,18 +4,18 @@ import sr.unasat.bewakingsbedrijf.entities.Post;
 import sr.unasat.bewakingsbedrijf.repositories.PostRepository;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 /**
  * Created by Patrice on 6/10/2017.
  */
 public class InsertPost extends JFrame{
         public InsertPost(){
-            super("Post");
-
             // init frame
-            JFrame insertPost = new JFrame();
+            JFrame insertPost = new JFrame("Locatie toevoegen");
 
             // post component
             JLabel postLabel = new JLabel("Locatie");
@@ -46,6 +46,10 @@ public class InsertPost extends JFrame{
                     Post newPost = new Post(1, postInput.getText());
                     PostRepository postRepository = new PostRepository();
                     postRepository.insertRecord(newPost);
+
+                    JOptionPane.showMessageDialog(null,"Post toegevoegd");
+                    WindowEvent winClosingEvent = new WindowEvent(insertPost, WindowEvent.WINDOW_CLOSING);
+                    Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(winClosingEvent);
 
                 }
             });

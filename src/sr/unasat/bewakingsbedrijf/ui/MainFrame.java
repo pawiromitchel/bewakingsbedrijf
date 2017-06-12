@@ -3,6 +3,8 @@ package sr.unasat.bewakingsbedrijf.ui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by mitchel on 5/30/17.
@@ -25,6 +27,8 @@ public class MainFrame extends JFrame {
         tabbedPane.add("Gebruikers", new GebruikerUI());
         tabbedPane.add("Posten", new PostUI());
         tabbedPane.add("Bewaker Rooster", new RoosterUI());
+        tabbedPane.add("Rol",new RolUI());
+        
 
         //  Place Rooster
 //        tabbedPane.add("Rooster", new RoosterUI());

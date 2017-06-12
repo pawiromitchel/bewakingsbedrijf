@@ -1,9 +1,7 @@
 package sr.unasat.bewakingsbedrijf.ui;
 
-import sr.unasat.bewakingsbedrijf.entities.Post;
-import sr.unasat.bewakingsbedrijf.entities.Rooster;
-import sr.unasat.bewakingsbedrijf.repositories.PostRepository;
-import sr.unasat.bewakingsbedrijf.repositories.RoosterRepository;
+import sr.unasat.bewakingsbedrijf.entities.Rol;
+import sr.unasat.bewakingsbedrijf.repositories.RolRepository;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -17,66 +15,59 @@ import java.util.Arrays;
 import java.util.Vector;
 
 /**
- * Created by mitchel on 6/7/17.
+ * Created by Patrice on 6/11/2017.
  */
-public class RoosterUI extends JPanel{
+public class RolUI extends JPanel {
+    private JButton selectAllButton, insertButton, updateButton, deleteButton, searchButton;
     private JList outputList;
-    private RoosterRepository roosterRepo;
+    private RolRepository rolRepo;
+    private JPanel buttonPanel;
+    //private JTextField searchField;
 
     private DefaultListModel listModel;
 
     private DefaultTableModel listTableModel;
     private JTable outputTable;
-    private JButton selectAllButton, insertButton, updateButton, deleteButton, searchButton;
-    private JPanel buttonPanel;
+
     private JTextField searchField;
     private TableRowSorter tableRowSorter;
     private JLabel searchLabel;
-    //private JTextField searchBar;
 
-    public void getData(){
+    private void getData(){
         // Voer SelectAll functie uit.
 
         // sr.unasat.beroeps.product.entities.Rooster database instantie is alleen 1 keer nodig
-        if (roosterRepo == null) {
-            roosterRepo = new RoosterRepository();
+        if (rolRepo == null) {
+            rolRepo = new RolRepository();
         }
 
         // Initialiseer de roosterRepo alleen als het moet
-        if (!roosterRepo.isInitialised()) {
-            roosterRepo.initialize();
+        if (!rolRepo.isInitialised()) {
+            rolRepo.initialize();
         }
 
+
         // Alleen als de rooster database is geinitialiseerd dan verder
-        if (roosterRepo.isInitialised()) {
-            java.util.List<Rooster> outputList = roosterRepo.selectAll();
+        if (rolRepo.isInitialised()) {
+            java.util.List<Rol> outputList = rolRepo.selectAll();
+
             // Maak de lijst leeg als er elementen inzitten
             listModel.removeAllElements();
 
             // Parse de lijst
-            for (Rooster rooster : outputList) {
-                Rooster record = rooster;
+            for (Rol rol : outputList) {
+                Rol record = rol;
                 listModel.addElement(record.toString());
             }
 
             listTableModel = (DefaultTableModel) outputTable.getModel();
             listTableModel.setRowCount(0);
             // Parse de table
-            for (Rooster rooster : outputList) {
-                Rooster record = rooster;
-                String[] colData = new String[6];
+            for (Rol rol : outputList) {
+                Rol record = rol;
+                String[] colData = new String[2];
                 colData[0] = Integer.valueOf(record.getId()).toString();
-                if (record.getGebruiker() != null) {
-                    colData[1] = record.getGebruiker().getVoornaam() + " " + record.getGebruiker().getAchternaam();
-                }
-                if (record.getPost() != null) {
-                    colData[2] = record.getPost().getLocatie();
-                }
-                if (record.getShift() != null) {
-                    colData[3] = record.getShift().getType();
-                    colData[5] = record.getShift().getBegintijd() + " tot " + record.getShift().getEindtijd();
-                }
-                colData[4] = record.getDatum();
+                colData[1] = record.getNaam();
                 listTableModel.addRow(colData);
             }
             outputTable.setModel(listTableModel);
@@ -92,11 +83,11 @@ public class RoosterUI extends JPanel{
         tableRowSorter.setRowFilter(RowFilter.regexFilter(query));
     }
 
-    public RoosterUI(){
-        roosterRepo = new RoosterRepository();
+    public RolUI(){
+        rolRepo = new RolRepository();
 
         //Buttons initializen
-        selectAllButton = new JButton("Refresh");
+        selectAllButton = new JButton("Select All");
         selectAllButton.setBackground(Color.green);
         insertButton = new JButton("Insert");
         insertButton.setBackground(Color.lightGray);
@@ -144,65 +135,59 @@ public class RoosterUI extends JPanel{
         //outputPanel.add(listPanel);
 
         listTableModel = new DefaultTableModel();
-        String[] colnames = {"Id", "Naam", "Post locatie", "Shift type", "Datum", "Tijd"};
+        String[] colnames = {"Id", "Rol"};
         Vector colnamesV = new Vector(Arrays.asList(colnames));
         outputTable = new JTable(null, colnamesV);
         JScrollPane tablePanel = new JScrollPane(outputTable);
         tablePanel.setPreferredSize(new Dimension(800, 150));
         outputPanel.add(tablePanel);
 
-        // run the method instantly
         getData();
 
         // Select listener
         selectAllButton.addActionListener(new ActionListener() {
-            @Override
+
             public void actionPerformed(ActionEvent arg) {
                 getData();
+
             }
         });
 
-        // Insert listener
         insertButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                // open InsertRooster popup
-                InsertRooster insertRooster = new InsertRooster();
+            public void actionPerformed(ActionEvent e) {
+                InsertRol insertRol= new InsertRol();
+
             }
-        });
 
-        updateButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-
-                // get selected row id
-                int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
-
-                // run the frame
-                UpdateRooster updateRooster = new UpdateRooster(id);
-            }
         });
 
         deleteButton.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent actionEvent) {
+            public void actionPerformed(ActionEvent e) {
 
-                // get selected value id
                 int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
-
                 int dialogButton = JOptionPane.YES_NO_OPTION;
                 int dialogResult = JOptionPane.showConfirmDialog (null, "Would you like to delete id: " + id + " ?","Confirm Deletion",dialogButton);
-                if(dialogResult == JOptionPane.YES_OPTION){
-                    // delete the specific id
-                    RoosterRepository roosterRepository = new RoosterRepository();
-                    roosterRepository.deleteRecord(id);
+                if(dialogResult == JOptionPane.YES_OPTION) {
+                    RolRepository rolRepository = new RolRepository();
+                    rolRepository.deleteRecord(id);
 
-                    // refresh the table
                     getData();
                 }
             }
         });
 
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int id = Integer.parseInt(outputTable.getModel().getValueAt(outputTable.getSelectedRow(), 0).toString());
+                UpdateRol updateRol = new UpdateRol(id);
+            }
+        });
+
+
+        // Search keylistener
         searchField.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent keyEvent) {
@@ -221,11 +206,13 @@ public class RoosterUI extends JPanel{
             }
         });
 
-        /*searchBar.addActionListener(new ActionListener() {
+
+       /* searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("jaja");
+
             }
         });*/
+
     }
 }
