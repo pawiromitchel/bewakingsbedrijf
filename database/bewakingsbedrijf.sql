@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 11, 2017 at 09:22 PM
+-- Generation Time: Jun 11, 2017 at 11:23 PM
 -- Server version: 5.7.18-0ubuntu0.16.04.1
 -- PHP Version: 7.0.18-0ubuntu0.16.04.1
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `bewakingsbedrijf`
 --
+CREATE DATABASE IF NOT EXISTS `bewakingsbedrijf` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `bewakingsbedrijf`;
 
 -- --------------------------------------------------------
 
