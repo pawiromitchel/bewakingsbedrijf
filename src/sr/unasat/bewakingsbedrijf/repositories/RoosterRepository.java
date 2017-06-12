@@ -23,7 +23,7 @@ public class RoosterRepository {
             // Onderstaande zoekt de juist class op uit de library en laad het in JVM
             Class.forName("com.mysql.jdbc.Driver");
             // De connectie wordt vervolgens gemaakt naar de database middels de juiste authenticatie
-            connect = DriverManager.getConnection("jdbc:mysql://localhost/bewakingsbedrijf?user=root&password=");
+            connect = DriverManager.getConnection("jdbc:mysql://localhost/bewakingsbedrijf?user=root&password=PAWIR0MITCHEL");
         } catch (ClassNotFoundException e) {
             System.out.println("De class is niet gevonden!");
         } catch (SQLException e) {
@@ -57,6 +57,7 @@ public class RoosterRepository {
                 int id = resultSet.getInt("id");
                 int gebruiker_id = resultSet.getInt("gebruiker_id");
                 int post_id = resultSet.getInt("post_id");
+                int shift_id = resultSet.getInt("shift_id");
                 String datum = resultSet.getString("datum");
 
                 // Maak een rooster instantie en print deze instantie
@@ -66,6 +67,9 @@ public class RoosterRepository {
                 }
                 if (post_id > 0) {
                     rooster.setPost(new PostRepository().selectRecord(post_id));
+                }
+                if (shift_id > 0){
+                    rooster.setShift(new ShiftRepository().selectRecord(shift_id));
                 }
                 rooster.setDatum(datum);
 
@@ -101,6 +105,7 @@ public class RoosterRepository {
                 int id = resultSet.getInt("id");
                 int gebruiker_id = resultSet.getInt("gebruiker_id");
                 int post_id = resultSet.getInt("post_id");
+                int shift_id = resultSet.getInt("shift_id");
                 String datum = resultSet.getString("datum");
 
                 // Maak een rooster instantie en print deze instantie
@@ -110,6 +115,9 @@ public class RoosterRepository {
                 }
                 if (post_id > 0) {
                     rooster.setPost(new PostRepository().selectRecord(post_id));
+                }
+                if (shift_id > 0){
+                    rooster.setShift(new ShiftRepository().selectRecord(shift_id));
                 }
                 rooster.setDatum(datum);
 
@@ -131,6 +139,7 @@ public class RoosterRepository {
             preparedStatement = connect.prepareStatement("update roosters set " +
                     " gebruiker_id = ?," +
                     " post_id = ?, " +
+                    " shift_id = ?, " +
                     " datum = ? " +
                     " where id = ?");
             if (rooster.getGebruiker() != null) {
@@ -145,8 +154,14 @@ public class RoosterRepository {
                 preparedStatement.setInt(2, 0);
             }
 
-            preparedStatement.setString(3, rooster.getDatum());
-            preparedStatement.setInt(4, rooster.getId());
+            if (rooster.getShift() != null){
+                preparedStatement.setInt(3, rooster.getShift().getId());
+            } else {
+                preparedStatement.setInt(3, 0);
+            }
+
+            preparedStatement.setString(4, rooster.getDatum());
+            preparedStatement.setInt(5, rooster.getId());
 
             // Voer de statement uit en haal het resultaat op
             result = preparedStatement.executeUpdate();
@@ -185,7 +200,7 @@ public class RoosterRepository {
         int result = 0;
 
         try {
-            preparedStatement = connect.prepareStatement("insert into roosters values (NULL,?,?,?)");
+            preparedStatement = connect.prepareStatement("insert into roosters values (NULL,?,?,?,?)");
             if (rooster.getGebruiker() != null) {
                 preparedStatement.setInt(1, rooster.getGebruiker().getId());
             } else {
@@ -198,7 +213,13 @@ public class RoosterRepository {
                 preparedStatement.setInt(2, 0);
             }
 
-            preparedStatement.setString(3, rooster.getDatum());
+            if (rooster.getShift() != null){
+                preparedStatement.setInt(3, rooster.getShift().getId());
+            } else {
+                preparedStatement.setInt(3, 0);
+            }
+
+            preparedStatement.setString(4, rooster.getDatum());
 
             // Voer de statement uit en haal het resultaat op
             result = preparedStatement.executeUpdate();

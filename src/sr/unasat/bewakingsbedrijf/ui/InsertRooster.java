@@ -1,13 +1,7 @@
 package sr.unasat.bewakingsbedrijf.ui;
 
-import sr.unasat.bewakingsbedrijf.entities.Gebruiker;
-import sr.unasat.bewakingsbedrijf.entities.Post;
-import sr.unasat.bewakingsbedrijf.entities.Rol;
-import sr.unasat.bewakingsbedrijf.entities.Rooster;
-import sr.unasat.bewakingsbedrijf.repositories.GebruikerRepository;
-import sr.unasat.bewakingsbedrijf.repositories.PostRepository;
-import sr.unasat.bewakingsbedrijf.repositories.RolRepository;
-import sr.unasat.bewakingsbedrijf.repositories.RoosterRepository;
+import sr.unasat.bewakingsbedrijf.entities.*;
+import sr.unasat.bewakingsbedrijf.repositories.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -32,7 +26,7 @@ public class InsertRooster extends JFrame {
         List<Gebruiker> gebruikerList = gebruikerRepository.selectAll();
         for (Gebruiker gebruiker : gebruikerList) {
             Gebruiker record = gebruiker;
-            gebruikerComboBox.addItem(record.getId() + " - " + record.getVoornaam().toString());
+            gebruikerComboBox.addItem(record.getId() + " - " + record.getVoornaam().toString() + " " + record.getAchternaam());
         }
 
         // post component
@@ -43,6 +37,16 @@ public class InsertRooster extends JFrame {
         for (Post post : postList) {
             Post record = post;
             postComboBox.addItem(record.getId() + " - " + record.getLocatie().toString());
+        }
+
+        // shift component
+        JLabel shiftLabel = new JLabel("Shift");
+        JComboBox shiftComboBox = new JComboBox();
+        ShiftRepository shiftRepository = new ShiftRepository();
+        List<Shift> shiftList = shiftRepository.selectAll();
+        for (Shift shift : shiftList) {
+            Shift record = shift;
+            shiftComboBox.addItem(record.getId() + " - " + record.getBegintijd() + " tot " + record.getEindtijd());
         }
 
         // datum component
@@ -57,15 +61,19 @@ public class InsertRooster extends JFrame {
         gebruikerComboBox.setBounds(180, 80, 120, 20);
         postLabel.setBounds(100, 100, 120, 20);
         postComboBox.setBounds(180, 100, 120, 20);
-        datumLabel.setBounds(100, 120, 120, 20);
-        datumInput.setBounds(180, 120, 120, 20);
-        submitButton.setBounds(140, 145, 150, 20);
+        shiftLabel.setBounds(100, 120, 120, 20);
+        shiftComboBox.setBounds(180, 120, 120, 20);
+        datumLabel.setBounds(100, 140, 120, 20);
+        datumInput.setBounds(180, 140, 120, 20);
+        submitButton.setBounds(140, 165, 150, 20);
 
         // add components
         insertRooster.getContentPane().add(gebruikerLabel);
         insertRooster.getContentPane().add(gebruikerComboBox);
         insertRooster.getContentPane().add(postLabel);
         insertRooster.getContentPane().add(postComboBox);
+        insertRooster.getContentPane().add(shiftLabel);
+        insertRooster.getContentPane().add(shiftComboBox);
         insertRooster.getContentPane().add(datumLabel);
         insertRooster.getContentPane().add(datumInput);
         insertRooster.getContentPane().add(submitButton);
@@ -87,6 +95,10 @@ public class InsertRooster extends JFrame {
                 String postComboValue = postComboBox.getSelectedItem().toString();
                 String[] explodedPostId = postComboValue.split(" - ");
 
+                // value van de shift
+                String shiftComboValue = shiftComboBox.getSelectedItem().toString();
+                String[] explodedShiftId = shiftComboValue.split(" - ");
+
                 // prepare gebruiker
                 GebruikerRepository gebruikerRepository = new GebruikerRepository();
                 Gebruiker gebruiker = gebruikerRepository.selectRecord(Integer.parseInt(explodedGebruikerId[0]));
@@ -95,8 +107,12 @@ public class InsertRooster extends JFrame {
                 PostRepository postRepository = new PostRepository();
                 Post post = postRepository.selectRecord(Integer.parseInt(explodedPostId[0]));
 
+                // prepare shift
+                ShiftRepository shiftRepository = new ShiftRepository();
+                Shift shift = shiftRepository.selectRecord(Integer.parseInt(explodedShiftId[0]));
+
                 // insert new rooster
-                Rooster newRooster = new Rooster(6, gebruiker, post, datumInput.getText());
+                Rooster newRooster = new Rooster(6, gebruiker, post, shift, datumInput.getText());
                 RoosterRepository roosterRepository = new RoosterRepository();
                 roosterRepository.insertRecord(newRooster);
             }

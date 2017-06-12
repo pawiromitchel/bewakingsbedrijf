@@ -22,9 +22,9 @@ public class MainFrame extends JFrame {
         tabbedPane.setBounds(50,50,200,200);
 
         //  Place Student
-        tabbedPane.add("Gebruiker", new GebruikerUI());
+        tabbedPane.add("Gebruikers", new GebruikerUI());
         tabbedPane.add("Posten", new PostUI());
-        tabbedPane.add("Rooster", new RoosterUI());
+        tabbedPane.add("Bewaker Rooster", new RoosterUI());
 
         //  Place Rooster
 //        tabbedPane.add("Rooster", new RoosterUI());

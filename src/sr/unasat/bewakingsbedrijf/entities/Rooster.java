@@ -9,12 +9,14 @@ public class Rooster {
     public int id;
     public Gebruiker gebruiker;
     public Post post;
+    public Shift shift;
     public String datum;
 
-    public Rooster(int id, Gebruiker gebruiker, Post post, String datum) {
+    public Rooster(int id, Gebruiker gebruiker, Post post, Shift shift, String datum) {
         this.id = id;
         this.gebruiker = gebruiker;
         this.post = post;
+        this.shift = shift;
         this.datum = datum;
     }
 
@@ -43,6 +45,14 @@ public class Rooster {
 
     public void setPost(Post post) {
         this.post = post;
+    }
+
+    public Shift getShift() {
+        return shift;
+    }
+
+    public void setShift(Shift shift) {
+        this.shift = shift;
     }
 
     public String getDatum() {

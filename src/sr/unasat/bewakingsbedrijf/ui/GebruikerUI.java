@@ -244,7 +244,6 @@ public class GebruikerUI extends JPanel{
                         public void actionPerformed(ActionEvent e) {
                             //if statement schrijven
 
-
                             //waarden ophalen van textvelden
                             String achternaamValue = achternaamField.getText().toString();
                             String voornaamValue = voornaamField.getText().toString();

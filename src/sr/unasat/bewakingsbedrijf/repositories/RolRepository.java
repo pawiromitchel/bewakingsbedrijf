@@ -21,7 +21,7 @@ public class RolRepository {
             // Onderstaande zoekt de juist class op uit de library en laad het in JVM
             Class.forName("com.mysql.jdbc.Driver");
             // De connectie wordt vervolgens gemaakt naar de database middels de juiste authenticatie
-            connect = DriverManager.getConnection("jdbc:mysql://localhost/bewakingsbedrijf?user=root&password=");
+            connect = DriverManager.getConnection("jdbc:mysql://localhost/bewakingsbedrijf?user=root&password=PAWIR0MITCHEL");
         } catch (ClassNotFoundException e) {
             System.out.println("De class is niet gevonden!");
         } catch (SQLException e) {
@@ -54,8 +54,6 @@ public class RolRepository {
                 int id = resultSet.getInt("id");
                 String naam = resultSet.getString("naam");
 
-                // Maak een student instantie en print deze instantie
-                //maak een constructor van Student
                 Rol rol = new Rol(id, naam);
 
                 System.out.println(rol);
